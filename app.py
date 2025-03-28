@@ -30,7 +30,7 @@ page = st.sidebar.selectbox("Выбрать страницу",
 
 
 if page == "Вступление":
-    st.title("Дашбоард для анализа данных пассажиров Титаника 🚢")
+    st.title("Дашборд для анализа данных пассажиров Титаника 🚢")
 
     st.image(
         'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b5229bb5-6ca7-41f8-8e49-59bd2a0f4737/dh8iilh-c9cf1533-4888-4c0f-b6c6-f608bc26cda8.jpg/v1/fill/w_1213,h_659,q_70,strp/on_this_night__112_years_ago__the_titanic_sank__by_robloxfan333172_dh8iilh-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4NiIsInBhdGgiOiJcL2ZcL2I1MjI5YmI1LTZjYTctNDFmOC04ZTQ5LTU5YmQyYTBmNDczN1wvZGg4aWlsaC1jOWNmMTUzMy00ODg4LTRjMGYtYjZjNi1mNjA4YmMyNmNkYTguanBnIiwid2lkdGgiOiI8PTIwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4C9QHAOryXN_Jv43Q6G-6y7hOZgPP7XU8SSs-d_zpRg', 
@@ -55,7 +55,7 @@ elif page == "Гистограмма возраста пассажиров":
     # из библиотеки seaborn для построения гистограммы:
     # удаляю пропуски из исходного датафрейма, kde=True - гладкая прямая сверху гистограммы
     sns.histplot(df['Age'].dropna(), kde=True, ax=ax1)
-    # функция для отображения matplotlib-графиков
+    # функция для отображения графикa
     st.pyplot(fig1)
 
     st.subheader('Гистограмма отражает количество пассажиров определённого возраста 👨🏻‍🦳')
@@ -137,7 +137,7 @@ elif page == "Распределение по классу билета":
     st.plotly_chart(fig4)
 
     # прикольная штучка с ползунком
-    optionals = st.expander("Optional Configurations", True)
+    optionals = st.expander("Выберите минимальную и максимальную стоимость билета", True)
 
     fare_min = optionals.slider(
     "Минимальная цена",
